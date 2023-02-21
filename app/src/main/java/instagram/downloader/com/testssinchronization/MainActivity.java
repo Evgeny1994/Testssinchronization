@@ -1,7 +1,10 @@
 package instagram.downloader.com.testssinchronization;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +14,13 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 import static android.widget.Toast.makeText;
@@ -181,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
         textView21 = findViewById(R.id.textView21);
         textView22 = findViewById(R.id.textView22);
 
+
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -205,6 +216,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
         editText1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -229,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         //   button.setOnClickListener(new View.OnClickListener() {
         ///        @Override
         //       public void onClick(View view) {
@@ -442,6 +456,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -792,10 +807,1309 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action:
-                //new MyTask1().execute();
+                new MyTask().execute();
+                new MyTask1().execute();
+                     new MyTask3().execute();
+                new MyTask4().execute();
+                new MyTask5().execute();
+                new MyTask6().execute();
+                new MyTask7().execute();
+                new MyTask8().execute();
+                new MyTask9().execute();
+                new MyTask10().execute();
+                new MyTask11().execute();
+                new MyTask12().execute();
+                new MyTask13().execute();
+                new MyTask14().execute();
+                new MyTask15().execute();
+                new MyTask16().execute();
+                new MyTask17().execute();
+                new MyTask18().execute();
+                new MyTask19().execute();
+                new MyTask20().execute();
+                new MyTask21().execute();
+                new MyTask22().execute();
+                new MyTask23().execute();
+                new MyTask24().execute();
+                new MyTask25().execute();
+                new MyTask26().execute();
+                new MyTask27().execute();
+                new MyTask28().execute();
+                new MyTask29().execute();
+                new MyTask30().execute();
+                new MyTask31().execute();
+                new MyTask32().execute();
+                new MyTask33().execute();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-}
+
+    //Вопрос № 1
+    class MyTask extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu1");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 1, Вариант ответа № 1
+    class MyTask1 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu2");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 1, Вариант ответа № 2
+    class MyTask2 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu3");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 1, Вариант ответа № 3
+    class MyTask3 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu4");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+
+    //Вопрос № 2
+    class MyTask4 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu5");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 2, Вариант ответа № 1
+    class MyTask5 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu6");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 2, Вариант ответа № 2
+    class MyTask6 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu7");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 2, Вариант ответа № 3
+    class MyTask7 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu8");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+
+    //Вопрос № 3
+    class MyTask8 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu9");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 3, Вариант ответа № 1
+    class MyTask9 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu10");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 3, Вариант ответа № 2
+    class MyTask10 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu11");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 3, Вариант ответа № 3
+    class MyTask11 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu12");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+
+    //Вопрос № 4
+    class MyTask12 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu13");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 4, Вариант ответа № 1
+    class MyTask13 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+
+
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu14");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 4, Вариант ответа № 2
+    class MyTask14 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu15");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 4, Вариант ответа № 3
+    class MyTask15 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+
+
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu16");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+
+    //Вопрос № 5
+    class MyTask16 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu17");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 5, Вариант ответа № 1
+    class MyTask17 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu18");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 5, Вариант ответа № 2
+    class MyTask18 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu19");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 5, Вариант ответа № 3
+    class MyTask19 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu20");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+
+    //Вопрос № 6
+    class MyTask20 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu21");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+    //Вопрос № 6, Вариант ответа № 1
+    class MyTask21 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        @Override
+        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery("select * FROM us");
+                {
+                    while (resultSet.next()) {
+                        String u1 = resultSet.getString("uu22");
+                        System.out.println(u1);
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            //    textView.setText(superDispatchKeyEvent());
+        }
+    }
+
+        //Вопрос № 6, Вариант ответа № 2
+        class MyTask22 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu23");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 6, Вариант ответа № 3
+        class MyTask23 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu24");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+
+        //Вопрос № 7
+        class MyTask24 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu25");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 7, Вариант ответа № 1
+        class MyTask25 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu26");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 7, Вариант ответа № 2
+        class MyTask26 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu27");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 7, Вариант ответа № 3
+        class MyTask27 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu28");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+
+
+        }
+
+
+        //Вопрос № 8
+        class MyTask28 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu29");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 8, Вариант ответа № 1
+        class MyTask29 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu30");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 8, Вариант ответа № 2
+        class MyTask30 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu31");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 8, Вариант ответа № 3
+        class MyTask31 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu32");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+
+        //Вопрос № 9
+        class MyTask32 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu33");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 9, Вариант ответа № 1
+        class MyTask33 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu34");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 9, Вариант ответа № 2
+        class MyTask34 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu35");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 9, Вариант ответа № 3
+        class MyTask35 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu36");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+
+        //Вопрос № 10
+        class MyTask36 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu37");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 10, Вариант ответа № 1
+        class MyTask37 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu38");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 10, Вариант ответа № 2
+        class MyTask38 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu39");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+
+        //Вопрос № 10, Вариант ответа № 3
+        class MyTask39 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+            @Override
+            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+                try {
+                    Class.forName("com.mysql.jdbc.Driver");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
+                    Statement statement = conn.createStatement();
+                    ResultSet resultSet = statement.executeQuery("select * FROM us");
+                    {
+                        while (resultSet.next()) {
+                            String u1 = resultSet.getString("uu40");
+                            System.out.println(u1);
+                        }
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                //    textView.setText(superDispatchKeyEvent());
+            }
+        }
+    }
+
+
+
+
+

@@ -847,15 +847,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Вопрос № 1
-    class MyTask extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
 
             }
+
             try {
                 Connection conn = DriverManager.getConnection("jdbc:mysql://37.140.192.145:3306/u1762928_new?autoReconnect=true&useSSL=false", "u1762928_root", "yP9xK6tU7vqC6u");
                 Statement statement = conn.createStatement();
@@ -863,8 +864,11 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu1");
-                        System.out.println(u1);
+                       //textView.setText(u1);
+
+                        return u1;
                     }
+                  //  return u1
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -873,15 +877,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+                textView2.setText(u1);
         }
     }
 
     //Вопрос № 1, Вариант ответа № 1
-    class MyTask1 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask1 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -894,7 +898,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu2");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -904,15 +909,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+              radioButton1.setText(u1);
         }
     }
 
     //Вопрос № 1, Вариант ответа № 2
-    class MyTask2 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask2 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -925,7 +930,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu3");
-                        System.out.println(u1);
+                       // System.out.println(u1);
+                        return  u1;
                     }
                 }
             } catch (SQLException e) {
@@ -935,15 +941,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+               radioButton2.setText(u1);
         }
     }
 
     //Вопрос № 1, Вариант ответа № 3
-    class MyTask3 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask3 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -957,7 +963,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu4");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -967,16 +974,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+                 radioButton3.setText(u1);
         }
     }
 
 
     //Вопрос № 2
-    class MyTask4 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask4 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -989,7 +996,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu5");
-                        System.out.println(u1);
+                        return u1;
+                        //System.out.println(u1);
                     }
                 }
             } catch (SQLException e) {
@@ -999,15 +1007,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+               textView3.setText(u1);
         }
     }
 
     //Вопрос № 2, Вариант ответа № 1
-    class MyTask5 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask5 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1020,7 +1028,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu6");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1030,15 +1039,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton4.setText(u1);
         }
     }
 
     //Вопрос № 2, Вариант ответа № 2
-    class MyTask6 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask6 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1051,7 +1060,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu7");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1061,15 +1071,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton5.setText(u1);
         }
     }
 
     //Вопрос № 2, Вариант ответа № 3
-    class MyTask7 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask7 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1082,7 +1092,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu8");
-                        System.out.println(u1);
+                       // System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1092,16 +1103,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+                radioButton6.setText(u1);
         }
     }
 
 
     //Вопрос № 3
-    class MyTask8 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask8 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1115,7 +1126,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu9");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1125,15 +1137,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            textView4.setText(u1);
         }
     }
 
     //Вопрос № 3, Вариант ответа № 1
-    class MyTask9 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask9 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1146,7 +1158,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu10");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1156,15 +1169,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton7.setText(u1);
         }
     }
 
     //Вопрос № 3, Вариант ответа № 2
-    class MyTask10 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask10 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1177,7 +1190,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu11");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1187,15 +1201,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton8.setText(u1);
         }
     }
 
     //Вопрос № 3, Вариант ответа № 3
-    class MyTask11 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask11 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1208,7 +1222,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu12");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1218,16 +1233,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton9.setText(u1);
         }
     }
 
 
     //Вопрос № 4
-    class MyTask12 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask12 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1241,7 +1256,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu13");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1252,15 +1268,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String  u1) {
+            textView5.setText(u1);
         }
     }
 
     //Вопрос № 4, Вариант ответа № 1
-    class MyTask13 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask13 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
 
 
             try {
@@ -1276,7 +1292,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu14");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1286,15 +1303,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+           radioButton10.setText(u1);
         }
     }
 
     //Вопрос № 4, Вариант ответа № 2
-    class MyTask14 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask14 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1307,7 +1324,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu15");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1317,15 +1335,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+           radioButton11.setText(u1);
         }
     }
 
     //Вопрос № 4, Вариант ответа № 3
-    class MyTask15 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask15 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings ) {
 
 
             try {
@@ -1341,7 +1359,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu16");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1351,16 +1370,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton12.setText(u1);
         }
     }
 
 
     //Вопрос № 5
-    class MyTask16 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask16 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1373,7 +1392,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu17");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1383,15 +1403,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            textView6.setText(u1);
         }
     }
 
     //Вопрос № 5, Вариант ответа № 1
-    class MyTask17 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask17 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1404,7 +1424,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu18");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1414,15 +1435,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton13.setText(u1);
         }
     }
 
     //Вопрос № 5, Вариант ответа № 2
-    class MyTask18 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask18 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1435,7 +1456,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu19");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1445,15 +1467,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton14.setText(u1);
         }
     }
 
     //Вопрос № 5, Вариант ответа № 3
-    class MyTask19 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask19 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1466,7 +1488,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu20");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1476,16 +1499,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton15.setText(u1);
         }
     }
 
 
     //Вопрос № 6
-    class MyTask20 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask20 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1498,7 +1521,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu21");
-                        System.out.println(u1);
+                       // System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1508,15 +1532,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+           textView7.setText(u1);
         }
     }
 
     //Вопрос № 6, Вариант ответа № 1
-    class MyTask21 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+    class MyTask21 extends AsyncTask<String, String, String> {
         @Override
-        protected Bitmap doInBackground(Bitmap... Bitmaps) {
+        protected String doInBackground(String... strings) {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
             } catch (ClassNotFoundException e) {
@@ -1529,7 +1553,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     while (resultSet.next()) {
                         String u1 = resultSet.getString("uu22");
-                        System.out.println(u1);
+                        //System.out.println(u1);
+                        return u1;
                     }
                 }
             } catch (SQLException e) {
@@ -1539,15 +1564,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            //    textView.setText(superDispatchKeyEvent());
+        protected void onPostExecute(String u1) {
+            radioButton16.setText(u1);
         }
     }
 
         //Вопрос № 6, Вариант ответа № 2
-        class MyTask22 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask22 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1560,7 +1585,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu23");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1570,15 +1596,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton17.setText(u1);
             }
         }
 
         //Вопрос № 6, Вариант ответа № 3
-        class MyTask23 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask23 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1591,7 +1617,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu24");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1601,16 +1628,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton18.setText(u1);
             }
         }
 
 
         //Вопрос № 7
-        class MyTask24 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask24 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1623,7 +1650,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu25");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1633,15 +1661,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                textView8.setText(u1);
             }
         }
 
         //Вопрос № 7, Вариант ответа № 1
-        class MyTask25 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask25 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1654,7 +1682,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu26");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1664,15 +1693,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton19.setText(u1);
             }
         }
 
         //Вопрос № 7, Вариант ответа № 2
-        class MyTask26 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask26 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1685,7 +1714,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu27");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1695,15 +1725,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton20.setText(u1);
             }
         }
 
         //Вопрос № 7, Вариант ответа № 3
-        class MyTask27 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask27 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1716,7 +1746,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu28");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1726,8 +1757,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                   radioButton21.setText(u1);
             }
 
 
@@ -1735,9 +1766,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Вопрос № 8
-        class MyTask28 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask28 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1750,7 +1781,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu29");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1760,15 +1792,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+               textView9.setText(u1);
             }
         }
 
         //Вопрос № 8, Вариант ответа № 1
-        class MyTask29 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask29 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1781,7 +1813,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu30");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1791,15 +1824,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+              radioButton22.setText(u1);
             }
         }
 
         //Вопрос № 8, Вариант ответа № 2
-        class MyTask30 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask30 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1812,7 +1845,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu31");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1822,15 +1856,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton23.setText(u1);
             }
         }
 
         //Вопрос № 8, Вариант ответа № 3
-        class MyTask31 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask31 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1843,7 +1877,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu32");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1853,16 +1888,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+               radioButton24.setText(u1);
             }
         }
 
 
         //Вопрос № 9
-        class MyTask32 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask32 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1875,7 +1910,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu33");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1885,15 +1921,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                textView10.setText(u1);
             }
         }
 
         //Вопрос № 9, Вариант ответа № 1
-        class MyTask33 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask33 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1906,7 +1942,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu34");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1916,15 +1953,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton25.setText(u1);
             }
         }
 
         //Вопрос № 9, Вариант ответа № 2
-        class MyTask34 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask34 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1937,7 +1974,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu35");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -1947,15 +1985,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton26.setText(u1);
             }
         }
 
         //Вопрос № 9, Вариант ответа № 3
-        class MyTask35 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask35 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -1978,16 +2016,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                radioButton27.setText(u1);
             }
         }
 
 
         //Вопрос № 10
-        class MyTask36 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask36 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -2000,7 +2038,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu37");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -2010,15 +2049,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+               textView11.setText(u1);
             }
         }
 
         //Вопрос № 10, Вариант ответа № 1
-        class MyTask37 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask37 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -2031,7 +2070,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu38");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -2041,15 +2081,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                   radioButton28.setText(u1);
             }
         }
 
         //Вопрос № 10, Вариант ответа № 2
-        class MyTask38 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask38 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -2062,7 +2102,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu39");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -2072,15 +2113,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                   radioButton29.setText(u1);
             }
         }
 
         //Вопрос № 10, Вариант ответа № 3
-        class MyTask39 extends AsyncTask<Bitmap, Bitmap, Bitmap> {
+        class MyTask39 extends AsyncTask<String, String, String> {
             @Override
-            protected Bitmap doInBackground(Bitmap... Bitmaps) {
+            protected String doInBackground(String... strings) {
                 try {
                     Class.forName("com.mysql.jdbc.Driver");
                 } catch (ClassNotFoundException e) {
@@ -2093,7 +2134,8 @@ public class MainActivity extends AppCompatActivity {
                     {
                         while (resultSet.next()) {
                             String u1 = resultSet.getString("uu40");
-                            System.out.println(u1);
+                            //System.out.println(u1);
+                            return u1;
                         }
                     }
                 } catch (SQLException e) {
@@ -2103,8 +2145,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(Bitmap bitmap) {
-                //    textView.setText(superDispatchKeyEvent());
+            protected void onPostExecute(String u1) {
+                    radioButton30.setText(u1);
             }
         }
     }
